@@ -101,12 +101,12 @@ declare module "react-dnd" {
   declare type ConnectDragSource = <T: ElementOrNode>(
     elementOrNode: T,
     options?: DragSourceOptions
-  ) => ?T;
+  ) => T;
 
   declare type ConnectDragPreview = <T: ElementOrNode>(
     elementOrNode: T,
     options?: DragPreviewOptions
-  ) => ?T;
+  ) => T;
 
   declare type DragSourceCollector<T> = (
     connect: DragSourceConnector,
@@ -162,7 +162,7 @@ declare module "react-dnd" {
     dropTarget: () => ConnectDropTarget
   };
 
-  declare type ConnectDropTarget = <T: ElementOrNode>(elementOrNode: T) => ?T;
+  declare type ConnectDropTarget = <T: ElementOrNode>(elementOrNode: T) => T;
 
   declare type DropTargetCollector<T> = (
     connect: DropTargetConnector,
